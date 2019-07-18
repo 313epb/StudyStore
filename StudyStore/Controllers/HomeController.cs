@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using StudyStore.Models;
+using StudyStore.Models.Catalog;
 
 namespace StudyStore.Controllers
 {
@@ -32,6 +29,11 @@ namespace StudyStore.Controllers
 		public IActionResult Privacy()
 		{
 			return View();
+		}
+
+		public IActionResult Catalog()
+		{
+			return View(CatalogIni.Initialize());
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,0 +1,25 @@
+﻿@model StudyStore.Models.Catalog.CatalogViewModel
+
+@{
+	ViewBag.Title = "Catalog";
+}
+
+<section id="catalog_items">
+	<div>
+		<table>
+			@foreach (var product in Model.ProductList)
+			{
+				<tr>
+					<td>
+						<h2>@product.Name</h2>
+						<h3>@product.Description</h3>
+					</td>
+					<td>
+						<h2>@product.Price</h2>
+					</td>
+				</tr>
+			}
+		</table>
+	</div>
+</section>
+
