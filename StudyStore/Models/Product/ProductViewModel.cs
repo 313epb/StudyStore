@@ -9,5 +9,6 @@
 		public byte[] Image { get; set; }
 
 		public decimal Price { get; set; }
+
 	}
 }

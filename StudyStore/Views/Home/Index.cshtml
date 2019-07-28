@@ -6,18 +6,32 @@
 
 <section id="catalog_items">
 	<div>
-		<table>
+		<table border="2"  cellpadding="5" cellspacing="5" >
 			@foreach (var product in Model.ProductList)
 			{
-				<tr>
-					<td>
-						<h2>@product.Name</h2>
-						<h3>@product.Description</h3>
-					</td>
-					<td>
-						<h2>@product.Price</h2>
-					</td>
-				</tr>
+			<tr align="center">
+				<td>
+					<img src="data:image;base64,@Convert.ToBase64String(product.Image)" width="150" height="100" />
+				</td>
+				<td>
+					<h2>@product.Name</h2>
+					<h3>@product.Description</h3>
+				</td>
+				<td width="100">
+					<h2>@product.Price</h2>
+				</td>
+				<td width="100">
+					<button>+</button>
+					<h2>@product.Quantity</h2>
+					<button>-</button>
+				</td>
+				<td width="100">
+					<h2>@product.Total</h2>
+				</td>
+				<td>
+					<img src="images/cart.png"  width="50" height="50"/>
+				</td>
+			</tr>
 			}
 		</table>
 	</div>

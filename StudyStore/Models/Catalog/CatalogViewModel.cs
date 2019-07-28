@@ -5,7 +5,7 @@ namespace StudyStore.Models.Catalog
 {
 	public class CatalogViewModel
 	{
-		public List<ProductViewModel> ProductList { get; set; }
+		public List<CatalogItemViewModel> ProductList { get; set; }
 
 	}
 }
